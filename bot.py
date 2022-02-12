@@ -1,11 +1,11 @@
 import time
 import sys
 import tweepy
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from random import randint
 from list_of_tweets import status_arr, hashtag_arr, comment_arr
 
-load_dotenv()
+# load_dotenv()
 
 # from credentials import *  # use this one for testing
 
