@@ -11,7 +11,7 @@ status_arr = [
 hashtag_arr = [
     "#NFT #NFTdrop #nftcollector #CharityHour",
     "#NFT #NFTs #ETH #Crypto #charity #NFTCollection",
-    "#NFT #NFTs #NFTCommunity #NFTartist #NFTdrop"
+    "#NFT #NFTs #NFTCommunity #NFTartist #NFTdrop",
     "#NFT #MintOfTheDay #OpenSeaNFT #NFTs #NFTLAUNCH"
 ]
 
