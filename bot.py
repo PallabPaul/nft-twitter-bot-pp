@@ -72,7 +72,7 @@ class TwitterBot:
         
         results = self.api.search_tweets(
             q="(NFT AND DROP AND YOUR) OR (NFT AND DROP AND YOUR AND BUYING) -ETH",
-            count=15,
+            count=5,
             since_id=self.last_post_id)
 
         id_name_dict = {}
@@ -95,7 +95,7 @@ class TwitterBot:
                 print("Commenting on tweet # {}".format(self.comment_count))
                 self.send_tweet(True,id,name)
                 self.comment_count += 1
-                time.sleep(90)
+                time.sleep(300)
 
     def start_bot(self):
 
