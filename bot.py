@@ -4,8 +4,8 @@ import tweepy
 from random import randint
 from os import environ
 from list_of_tweets import status_arr, hashtag_arr, comment_arr
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 class TwitterBot:
 
