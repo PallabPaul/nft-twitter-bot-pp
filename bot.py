@@ -21,7 +21,8 @@ class TwitterBot:
 
         self.api = tweepy.API(auth)
 
-        self.INTERVAL = 60 * 45
+        self.INTERVAL = 60 * 32
+        self.INTERVAL2 = 60 * 43
 
         self.prev_status_index = -1
 
@@ -95,7 +96,7 @@ class TwitterBot:
                 print("Commenting on tweet # {}".format(self.comment_count))
                 self.send_tweet(True,id,name)
                 self.comment_count += 1
-                time.sleep(360)
+                time.sleep(344)
 
     def start_bot(self):
 
@@ -103,7 +104,7 @@ class TwitterBot:
             self.tweet_a_status()
             time.sleep(self.INTERVAL)
             self.tweet_comments()
-            time.sleep(self.INTERVAL)
+            time.sleep(self.INTERVAL2)
             self.tweet_comments()
             time.sleep(self.INTERVAL)
 
