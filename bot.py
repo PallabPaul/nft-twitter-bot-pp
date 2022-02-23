@@ -23,6 +23,7 @@ class TwitterBot:
 
         self.INTERVAL = 60 * 32
         self.INTERVAL2 = 60 * 43
+        self.INTERVAL3 = 60 * 60 * 3
 
         self.prev_status_index = -1
 
@@ -102,11 +103,7 @@ class TwitterBot:
 
         while True:
             self.tweet_a_status()
-            time.sleep(self.INTERVAL)
-            self.tweet_comments()
-            time.sleep(self.INTERVAL2)
-            self.tweet_comments()
-            time.sleep(self.INTERVAL)
+            time.sleep(self.INTERVAL3)
 
 if __name__ == '__main__':
      bot = TwitterBot()
