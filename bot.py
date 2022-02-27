@@ -23,7 +23,7 @@ class TwitterBot:
 
         self.INTERVAL = 60 * 32
         self.INTERVAL2 = 60 * 43
-        self.INTERVAL3 = 60 * 60 * 3
+        self.INTERVAL3 = 60 * 60 * 2.2
 
         self.prev_status_index = -1
 
@@ -48,7 +48,7 @@ class TwitterBot:
 
         png_filename = "./images/{}.png".format(randint(1,19))
         gif_filename = "./images/1.gif"
-        return gif_filename if randint(1,5) == 5 else png_filename
+        return gif_filename if randint(1,4) == 4 else png_filename
 
     def send_tweet(self,is_comment=False,id=None,name=None):
 
@@ -57,8 +57,8 @@ class TwitterBot:
         if is_comment:
             status = "@"+name+" "+status
 
-        media_or_not = randint(1,4)
-        if media_or_not == 4 and not is_comment:
+        media_or_not = randint(1,2)
+        if media_or_not == 2 and not is_comment:
             self.api.update_status(status, in_reply_to_status_id=id)
         else:
             self.api.update_status_with_media(status, self.get_random_media_file(), in_reply_to_status_id=id)
