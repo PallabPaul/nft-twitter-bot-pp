@@ -57,8 +57,8 @@ class TwitterBot:
         if is_comment:
             status = "@"+name+" "+status
 
-        media_or_not = randint(1,2)
-        if media_or_not == 2 and not is_comment:
+        media_or_not = randint(1,3)
+        if media_or_not == 3 and not is_comment:
             self.api.update_status(status, in_reply_to_status_id=id)
         else:
             self.api.update_status_with_media(status, self.get_random_media_file(), in_reply_to_status_id=id)
